@@ -1,6 +1,7 @@
 /*JQuery*/
 $.noConflict()
 jQuery(document).ready(function($) {
+    //smooth scroll
     $('.nav-items a, .read-button').on('click', function(event) {
         if (this.hash !== '') {
             event.preventDefault();
@@ -22,6 +23,7 @@ window.addEventListener('scroll', function() {
         document.querySelector('.header').style.opacity = 1;
     }
 });
+
 //Scroll indicator
 //When the user scrolls the page, execute myFunction
 function indicator() {
@@ -34,6 +36,7 @@ function indicator() {
     }
 }
 indicator()
+
 /*Modal*/
 function Modal() {
     // Get the modal
