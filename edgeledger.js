@@ -1,7 +1,7 @@
-/*JQuery*/
+// JQuery
 $.noConflict()
 jQuery(document).ready(function($) {
-    //smooth scroll
+    // Smooth scroll
     $('.nav-items a, .read-button').on('click', function(event) {
         if (this.hash !== '') {
             event.preventDefault();
@@ -14,8 +14,8 @@ jQuery(document).ready(function($) {
 });
 })
 
-/*JavaScript*/
-//Sticky menu background
+// JavaScript
+// Sticky menu background
 window.addEventListener('scroll', function() {
     if (window.scrollY > 51) {
         document.querySelector('.header').style.opacity = 0.9;
@@ -24,36 +24,36 @@ window.addEventListener('scroll', function() {
     }
 });
 
-//Scroll indicator
-//When the user scrolls the page, execute myFunction
+// Scroll indicator
+// When the user scrolls the page, execute myFunction
 function indicator() {
     window.onscroll = function() {ScrollFunction()};
     function ScrollFunction() {
-        let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-        let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-        let scrolled = (winScroll / height) * 100;
-        document.getElementById("ScrollBar").style.width = scrolled + "%";
+        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (winScroll / height) * 100;
+        document.querySelector('#ScrollBar').style.width = scrolled + "%";
     }
 }
 indicator()
 
-/*Modal*/
+// Modal
 function Modal() {
     // Get the modal
-    let modal = document.getElementById('whomodal');
+    const modal = document.querySelector('#whomodal');
     // Get the image and insert it inside the modal - use its "alt" text as a caption
-    let img = document.getElementById('whoimage');
-    let modalImg = document.getElementById("img01");
-    let captionText = document.getElementById("caption");
+    const img = document.querySelector('#whoimage');
+    const modalImg = document.querySelector('#img01');
+    const captionText = document.querySelector('#caption');
     img.onclick = function(){
         modal.style.display = "block";
         modalImg.src = this.src;
         captionText.innerHTML = this.alt;
     }
 // Get the <span> element that closes the modal
-let span = document.getElementsByClassName("close")[0];
+const span = document.querySelectorAll('.close')[0];
 // When the user clicks on <span> (x), close the modal
-span.onclick = function() { 
-    modal.style.display = "none";
+span.onclick = function() {
+    modal.style.display = 'none';
 }
 }
