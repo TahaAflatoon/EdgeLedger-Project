@@ -32,7 +32,7 @@ function indicator() {
         const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
         const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
         const scrolled = (winScroll / height) * 100;
-        document.querySelector('#ScrollBar').style.width = scrolled + "%";
+        document.querySelector('#ScrollBar').style.width = scrolled + '%';
     }
 }
 indicator()
@@ -46,7 +46,7 @@ function Modal() {
     const modalImg = document.querySelector('#img01');
     const captionText = document.querySelector('#caption');
     img.onclick = function(){
-        modal.style.display = "block";
+        modal.style.display = 'block';
         modalImg.src = this.src;
         captionText.innerHTML = this.alt;
     }
