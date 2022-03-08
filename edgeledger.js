@@ -11,7 +11,7 @@ jQuery(document).ready(function($) {
                 },800
             );
         }
-});
+    });
 })
 
 // JavaScript
@@ -41,22 +41,19 @@ indicator()
 function Modal() {
     // Get the modal
     const modal = document.querySelector('#whomodal');
-
     // Get the image and insert it inside the modal - use its "alt" text as a caption
     const img = document.querySelector('#whoimage');
     const modalImg = document.querySelector('#img01');
     const captionText = document.querySelector('#caption');
-    img.onclick = function(){
+    img.onclick = function() {
         modal.style.display = 'block';
         modalImg.src = this.src;
         captionText.innerHTML = this.alt;
     }
-
-// Get the <span> element that closes the modal
-const span = document.querySelectorAll('.close')[0];
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-    modal.style.display = 'none';
-}
+    // Get the <span> element that closes the modal
+    const span = document.querySelectorAll('.close')[0];
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() {
+        modal.style.display = 'none';
+    }
 }
